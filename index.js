@@ -9,11 +9,13 @@ app.get('/test', (req, res) =>{
     res.send('success');
 })
 
+//gets names array
 app.get('/names', (req, res) =>{
     const names = ['Beau', 'Peterson', 'Colt', 'Rooster', 'Hank'];
     res.send(names);
 })
 
+//gets number array
 app.get('/numbers', (req, res) =>{
     const numbers = [];
 
@@ -24,6 +26,7 @@ app.get('/numbers', (req, res) =>{
     res.send(numbers);
 })
 
+//gets the highest number in the random array 
 app.get('/randomNumber', (req, res) =>{
     const numbers = [];
 
@@ -40,6 +43,8 @@ app.get('/randomNumber', (req, res) =>{
     res.send(`${numbers} - highest number - ${highestNumber}`);
 })
 
+
+//gets the number in the array from the given index
 app.get('/numbers/:index', (req, res) => {
     const numbers = [];
 
